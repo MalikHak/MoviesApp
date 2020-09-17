@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">فیلم ها</string>
+
+    <string name="welcome_to_movies_app">خوش امدیدد</string>
+    <string name="made_with">ساخته شده</string>
+    <string name="auaf"> AUAF</string>
+    <string name="register">ثبت نام</string>
+    <string name="email_address">ادرس الکترونی</string>
+    <string name="password">رمز</string>
+    <string name="login">ورود</string>
+    <string name="term_and_policies">مقرارات</string>
+    <string name="confirm_password">Confirm Password</string>
+</resources>
