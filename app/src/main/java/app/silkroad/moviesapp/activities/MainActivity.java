@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         listActors.add(actor8);
 
 
+
         actorsAdapter= new ActorsAdapter(MainActivity.this,listActors);
 
         viewPagerAdapter= new MyPagerAdapter(getSupportFragmentManager(),images);
