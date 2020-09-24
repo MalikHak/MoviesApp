@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import app.silkroad.moviesapp.R;
+import app.silkroad.moviesapp.application.MoviesApp;
+import app.silkroad.moviesapp.utilities.SessionManager;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -20,10 +22,14 @@ public class RegisterActivity extends AppCompatActivity {
     EditText etEmailSignUp,etPasswordSignUp,etConfirmPasswordSignUp;
     Button btnSignUp;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+
 
         tvRegister=findViewById(R.id.tvRegister);
 
