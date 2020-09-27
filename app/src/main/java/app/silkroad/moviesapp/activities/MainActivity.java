@@ -1,6 +1,7 @@
 package app.silkroad.moviesapp.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,8 +25,11 @@ import app.silkroad.moviesapp.adapters.MoviesAdapter;
 import app.silkroad.moviesapp.fragments.MovieItemFragment;
 import app.silkroad.moviesapp.models.Actor;
 import app.silkroad.moviesapp.models.Movies;
+import app.silkroad.moviesapp.utilities.LocaleManager;
 import app.silkroad.moviesapp.utilities.SessionManager;
 import app.silkroad.moviesapp.views.CircleImageView;
+
+import static android.content.ContentValues.TAG;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -48,6 +53,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ActorsAdapter actorsAdapter;
     MoviesAdapter moviesAdapter;
 
+
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base));
+        Log.d(TAG, "attachBaseContext");
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sessionManager.setHighScore(1000+"");
 
         ivProfile=findViewById(R.id.ivProfileUser);
+
 
         ivProfile.setOnClickListener(this);
 
@@ -134,12 +146,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        Intent intent;
         switch (view.getId()){
 
             case  R.id.ivProfileUser:
-                Intent intent=new Intent(MainActivity.this,DetailsActivity.class);
+                 intent=new Intent(MainActivity.this,UserProfileActivity.class);
                 startActivity(intent);
             break;
+
+            case  R.id.cvChangeLanguage:
+                 intent=new Intent(MainActivity.this,UserProfileActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 

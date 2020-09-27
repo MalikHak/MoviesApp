@@ -11,4 +11,8 @@
     <string name="login">Login</string>
     <string name="term_and_policies">Term and Policies</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="sylanguage">Select your Language</string>
+    <string name="top_actors">Top Actors</string>
+    <string name="movies">Movies</string>
+    <string name="hub">Hub</string>
 </resources>

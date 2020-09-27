@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import app.silkroad.moviesapp.application.MoviesApp;
 import app.silkroad.moviesapp.models.Movies;
 
+
 public class SessionManager {
  MoviesApp myApp;
  Context context;
@@ -15,6 +16,8 @@ public class SessionManager {
  String PREF_NAME="MoviesApp";
  int PRIVATE_MODE = 0;
 
+
+    private String LANGUAGE = "moviesAppLanguage";
 
  private String HIGH_SCORE_USER = "highscore";
 
@@ -55,6 +58,15 @@ public class SessionManager {
     }
 
 
+
+    public String getLanguage() {
+        return pref.getString(LANGUAGE, "en");
+    }
+
+    public void setLanguage(String language) {
+        editor.putString(LANGUAGE, language);
+        editor.commit();
+    }
 
 
 

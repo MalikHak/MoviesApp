@@ -10,5 +10,9 @@
     <string name="password">رمز</string>
     <string name="login">ورود</string>
     <string name="term_and_policies">مقرارات</string>
-    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_password">تکرار پسورد</string>
+    <string name="sylanguage">زبان مورد نظر را انتخاب کنید</string>
+    <string name="top_actors">بهترین بازیگران</string>
+    <string name="movies">فیلم</string>
+    <string name="hub">خانه</string>
 </resources>

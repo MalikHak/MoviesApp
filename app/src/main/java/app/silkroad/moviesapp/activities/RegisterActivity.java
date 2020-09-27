@@ -3,7 +3,9 @@ package app.silkroad.moviesapp.activities;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -13,7 +15,10 @@ import android.widget.Toast;
 
 import app.silkroad.moviesapp.R;
 import app.silkroad.moviesapp.application.MoviesApp;
+import app.silkroad.moviesapp.utilities.LocaleManager;
 import app.silkroad.moviesapp.utilities.SessionManager;
+
+import static android.content.ContentValues.TAG;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -22,6 +27,11 @@ public class RegisterActivity extends AppCompatActivity {
     EditText etEmailSignUp,etPasswordSignUp,etConfirmPasswordSignUp;
     Button btnSignUp;
 
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(LocaleManager.setLocale(base));
+        Log.d(TAG, "attachBaseContext");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
